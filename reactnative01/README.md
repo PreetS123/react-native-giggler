@@ -10,6 +10,14 @@ Initial release date was 26th March 2015
 # Node --> v20.11.1
 # React Native --> 0.73.5
 
+# Important tools for react native setup
+   # Choco
+   # Node
+   # Jdk
+   # Android Studio
+   # Adding of path of android SDK, java path, and platform tools
+   
+
 # How to create a new folder in react native
  npx react-native init AwesomeProject
 
