@@ -6,7 +6,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './source/screens/Home';
 import Settings from './source/screens/Settings';
 import Testimonials from './source/screens/Testimonials';
-import SkillScreen from './source/screens/Skills';
+import SimpleForm from './source/screens/SimpleForm';
+import ListItem from './source/screens/ListItem';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,10 +15,10 @@ function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={ListItem} />
         {/* Add another screen for the second tab */}
         <Tab.Screen name="Testimonial" component={Testimonials}/>
-        <Tab.Screen name="Skill" component={SkillScreen}/>
+        <Tab.Screen name="Form" component={SimpleForm}/>
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>

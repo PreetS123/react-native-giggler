@@ -16,7 +16,7 @@ Initial release date was 26th March 2015
    # Jdk
    # Android Studio
    # Adding of path of android SDK, java path, and platform tools
-   
+
 
 # How to create a new folder in react native
  npx react-native init AwesomeProject
@@ -41,3 +41,13 @@ Handle List
 Form handling
 Rest APIs
 Redux
+
+
+# What is JSX
+ (JavaScript extension)
+ It act as a compiler where we can add HTML and JS element in a single component.
+
+ # What is props
+ Props are basically objects or information passed from one component to other.
+
+ 
