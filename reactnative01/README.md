@@ -57,4 +57,6 @@ Redux
 
 # Checking of Platform (ios,android)
   Platform.OS is the property to check the platform of an application. We need to know whether our user is using a android or ios application. 
+  JSON.stringify(Platform)--> It gives us access to many property 
+  Even we can know our Platform version.
  
