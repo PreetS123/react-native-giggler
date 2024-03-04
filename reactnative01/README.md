@@ -55,4 +55,6 @@ Redux
     Updating 
     Unmounting
 
+# Checking of Platform (ios,android)
+  Platform.OS is the property to check the platform of an application. We need to know whether our user is using a android or ios application. 
  

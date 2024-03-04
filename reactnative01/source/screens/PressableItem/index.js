@@ -1,13 +1,20 @@
-import { View, Text, Pressable, StyleSheet, StatusBar } from 'react-native'
-import React from 'react'
+import { View, Text, Pressable, StyleSheet, StatusBar, Button } from 'react-native'
+import React, { useState } from 'react'
 
 export default function PressableButton() {
+    const [hide, setHide] = useState(false);
+    const [barStyle, setBarStyle]= useState("dark-content")
   return (
     <View style={styles.main}>
     <StatusBar 
      backgroundColor={'maroon'}
-     barStyle={'light-content'}
+     barStyle={barStyle}
+     hidden={hide}
     />
+    <View>
+    <Button title="Toggle Status bar" onPress={()=>setHide(!hide)} />
+    <Button title="Update Styles" onPress={()=>setBarStyle('default')} />
+    </View>
       <Pressable 
     //    onPress={()=>console.warn('normal on press')}
     //    onLongPress={()=>{console.warn("longggg presssss")}}
