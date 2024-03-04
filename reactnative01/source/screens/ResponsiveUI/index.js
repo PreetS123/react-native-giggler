@@ -1,6 +1,7 @@
 import { ScrollView, Text, TouchableHighlight, View} from 'react-native'
 import React from 'react';
 import resStyles from './styles'
+import RadioButton from '../RadioButton';
 
 export default function ResponsiveUI() {
   return (
@@ -34,7 +35,7 @@ export default function ResponsiveUI() {
       </TouchableHighlight>
       </ScrollView>
       <View style={resStyles.eachBox3}>
-      <Text>View 3</Text>
+       <RadioButton/>
       </View>
      
     </View>

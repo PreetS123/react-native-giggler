@@ -63,7 +63,8 @@ import { StyleSheet } from "react-native";
       },
     eachBox3:{
         flex:1,
-        backgroundColor:"#DC2D08"
+        backgroundColor:"#DC2D08",
+        padding:5,
     }
 })
 
