@@ -1,9 +1,13 @@
-import { View, Text, Pressable, StyleSheet } from 'react-native'
+import { View, Text, Pressable, StyleSheet, StatusBar } from 'react-native'
 import React from 'react'
 
 export default function PressableButton() {
   return (
     <View style={styles.main}>
+    <StatusBar 
+     backgroundColor={'maroon'}
+     barStyle={'light-content'}
+    />
       <Pressable 
     //    onPress={()=>console.warn('normal on press')}
     //    onLongPress={()=>{console.warn("longggg presssss")}}
