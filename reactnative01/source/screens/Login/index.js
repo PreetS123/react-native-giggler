@@ -1,10 +1,12 @@
 import { View, Text, TextInput, StyleSheet, Button } from 'react-native'
 import React, { useState } from 'react'
+import { useNavigation } from '@react-navigation/native';
 
-export default function LoginScreen({navigation}) {
+export default function LoginScreen() {
     const [email,setEmail]= useState("");
     const [password, setPassword]= useState("");
     const [showPassword,setShowPassword]= useState(true);
+    const navigation= useNavigation();
    
 
 
