@@ -10,6 +10,7 @@ import SimpleForm from './source/screens/SimpleForm';
 import ListItem from './source/screens/ListItem';
 import ResponsiveUI from './source/screens/ResponsiveUI';
 import TestingModal from './source/screens/TestingModal.js';
+import PressableButton from './source/screens/PressableItem/index.js';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +21,7 @@ function App() {
         <Tab.Screen name="Home" component={ResponsiveUI} />
         {/* Add another screen for the second tab */}
         <Tab.Screen name="Testimonial" component={Testimonials}/>
-        <Tab.Screen name="Modal" component={TestingModal}/>
+        <Tab.Screen name="Modal" component={PressableButton}/>
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>
