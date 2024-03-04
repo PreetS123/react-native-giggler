@@ -34,9 +34,9 @@ export default function ResponsiveUI() {
       <Text style={[resStyles.button, resStyles.error]}>Error</Text>
       </TouchableHighlight>
       </ScrollView>
-      <View style={resStyles.eachBox3}>
+      <ScrollView style={resStyles.eachBox3}>
        <RadioButton/>
-      </View>
+      </ScrollView>
      
     </View>
   )
