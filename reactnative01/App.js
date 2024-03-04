@@ -8,6 +8,7 @@ import Settings from './source/screens/Settings';
 import Testimonials from './source/screens/Testimonials';
 import SimpleForm from './source/screens/SimpleForm';
 import ListItem from './source/screens/ListItem';
+import ResponsiveUI from './source/screens/ResponsiveUI';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={ListItem} />
+        <Tab.Screen name="Home" component={ResponsiveUI} />
         {/* Add another screen for the second tab */}
         <Tab.Screen name="Testimonial" component={Testimonials}/>
         <Tab.Screen name="Form" component={SimpleForm}/>

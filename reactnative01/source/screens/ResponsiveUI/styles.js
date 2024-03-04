@@ -1,0 +1,70 @@
+import { StyleSheet } from "react-native";
+
+ const resStyles=StyleSheet.create({
+    mainContainer:{
+        flex:1,
+        backgroundColor:"green",
+        flexDirection:"column",
+        flexWrap:"wrap",
+    },
+    eachBox1:{
+        flex:2,
+        flexDirection:"row",
+        flexWrap:"wrap",
+        backgroundColor:"coral"
+    },
+    commonText:{
+        fontSize:20,
+        color:"#fff",
+        padding:5,
+        fontWeight:"bold"
+    },
+    innerBox1:{
+        flex:1,
+        backgroundColor:"skyblue",
+        margin:10,
+    },
+    innerBox2:{
+        flex:1,
+        backgroundColor:"blue",
+        margin:10,
+    },
+    innerBox3:{
+        flex:1,
+        backgroundColor:"orange",
+        margin:10,
+    },
+    eachBox2:{
+        flex:1,
+        backgroundColor:"#F04621",
+    },
+    button:{
+        backgroundColor:"#bbb",
+        color:"#fff",
+        textAlign:"center",
+        padding:10,
+        margin:10,
+        borderRadius:10,
+        shadowColor:"red",
+        elevation:10,
+        shadowOpacity:1
+    },
+    success:{
+      backgroundColor:"green",
+    },
+    primary:{
+        backgroundColor:"blue",
+      },
+      warning:{
+        backgroundColor:"gold",
+      },
+      error:{
+        backgroundColor:"red",
+      },
+    eachBox3:{
+        flex:1,
+        backgroundColor:"#DC2D08"
+    }
+})
+
+export default resStyles;

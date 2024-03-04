@@ -50,4 +50,9 @@ Redux
  # What is props
  Props are basically objects or information passed from one component to other.
 
+ # Life Cycle method in react-native
+    Mounting
+    Updating 
+    Unmounting
+
  
