@@ -1,9 +1,22 @@
-import { ScrollView, Text, TouchableHighlight, View} from 'react-native'
-import React from 'react';
+import { ActivityIndicator, Button, ScrollView, ScrollViewBase, Text, TouchableHighlight, View} from 'react-native'
+import React, { useEffect, useState } from 'react';
 import resStyles from './styles'
 import RadioButton from '../RadioButton';
 
 export default function ResponsiveUI() {
+    const [loaderShow,setLoaderShow]= useState(false);
+  
+    const displayLoader=()=>{
+        setLoaderShow(true);
+        setTimeout(()=>{
+            setLoaderShow(false)
+        },3000);
+    }
+
+    useEffect(()=>{
+        return ()=>displayLoader();
+    },[])
+
   return (
     <View style={resStyles.mainContainer}>
       <View style={resStyles.eachBox1}>
@@ -37,7 +50,18 @@ export default function ResponsiveUI() {
       <ScrollView style={resStyles.eachBox3}>
        <RadioButton/>
       </ScrollView>
-     
+      <ScrollView style={resStyles.eachBox4}>
+       <Text style={{fontSize:20,color:"#fff"}}>Loader Indicator</Text>
+       <View style={resStyles.loaderMain}>
+       <ActivityIndicator size={50} color="green" animating={loaderShow} />
+       <Button title="Show loader" onPress={displayLoader} />
+       </View>
+      </ScrollView>
+      <ScrollView style={resStyles.eachBox5}>
+     </ScrollView>
+     <ScrollView style={resStyles.eachBox6}>
+    </ScrollView>
+    
     </View>
   )
 }

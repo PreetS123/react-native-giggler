@@ -55,6 +55,9 @@ const radioStyles=StyleSheet.create({
         backgroundColor:"#fff",
         alignItems:"center",
         justifyContent:"center",
+        flexDirection:"row",
+        flexWrap:"wrap",
+        margin:5,
     },
     radioWrapper:{
         flexDirection:"row",

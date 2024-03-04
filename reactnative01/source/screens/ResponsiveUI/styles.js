@@ -3,15 +3,15 @@ import { StyleSheet } from "react-native";
  const resStyles=StyleSheet.create({
     mainContainer:{
         flex:1,
+        width:"100%",
         backgroundColor:"green",
         flexDirection:"column",
-        flexWrap:"wrap",
     },
     eachBox1:{
-        flex:2,
+        flex:1,
         flexDirection:"row",
         flexWrap:"wrap",
-        backgroundColor:"coral"
+        backgroundColor:"#F8A897"
     },
     commonText:{
         fontSize:20,
@@ -36,7 +36,7 @@ import { StyleSheet } from "react-native";
     },
     eachBox2:{
         flex:1,
-        backgroundColor:"#F04621",
+        backgroundColor:"#F07257",
     },
     button:{
         backgroundColor:"#bbb",
@@ -63,7 +63,25 @@ import { StyleSheet } from "react-native";
       },
     eachBox3:{
         flex:1,
-        backgroundColor:"#DC2D08",
+        backgroundColor:"#E05E42",
+        padding:5,
+    },
+    eachBox4:{
+        flex:1,
+        backgroundColor:"#F85937",
+        padding:5,
+    },
+    loaderMain:{
+        flex:1,
+    },
+    eachBox5:{
+        flex:1,
+        backgroundColor:"#F04723",
+        padding:5,
+    },
+    eachBox6:{
+        flex:1,
+        backgroundColor:"#F63207",
         padding:5,
     }
 })
