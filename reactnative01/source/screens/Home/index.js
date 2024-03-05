@@ -42,7 +42,7 @@ export default function HomeScreen({route}) {
       <Text style={homeStyles.name}>{resumeData.name}</Text>
       <Text style={homeStyles.title}>{resumeData.title}</Text>
       <Text style={homeStyles.summary}>{resumeData.summary}</Text>
-      <View>
+      <View style={homeStyles.commonFlex}>
       <Text style={[homeStyles.sectionHeader,homeStyles.textCenter]}>Skills</Text>
       <View style={homeStyles.skillsContainer}>
       {
@@ -53,7 +53,7 @@ export default function HomeScreen({route}) {
       </View>
       </View>
        
-      <View>
+      <View style={homeStyles.commonFlex}>
       <Text style={[homeStyles.sectionHeader,homeStyles.textCenter]}>Experience</Text>
       {
         resumeData.experience.map((el,i)=>(
@@ -66,7 +66,7 @@ export default function HomeScreen({route}) {
       }
       </View>
 
-      <View>
+      <View style={homeStyles.commonFlex}>
       <Text style={[homeStyles.sectionHeader,homeStyles.textCenter]}>Education</Text>
       {resumeData.education.map((el,i)=>(
         <View key={i} style={homeStyles.educationItem}>

@@ -1,6 +1,8 @@
 import React from 'react';
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 // Import your screen components
 import HomeScreen from './source/screens/Home';
@@ -14,28 +16,20 @@ import PressableButton from './source/screens/PressableItem/index.js';
 import LoginScreen from './source/screens/Login/index.js';
 import Register from './source/screens/Register/index.js';
 import SplashScreenComp from './source/splash/index.js';
+import SettingStack from './source/navigation/SettingStack/index.js';
+import ProfileScreen from './source/screens/Profile/index.js';
+import TabNavigationScreen from './source/navigation/TabNavigation/index.js';
+import { NativeBaseProvider } from 'native-base';
 
 const Tab = createBottomTabNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-      {/*<Tab.Screen name="Splash" component={SplashScreenComp} options={{ tabBarVisible: false }} />*/}
-        <Tab.Screen name="Login" component={LoginScreen} />
-        {/* Add another screen for the second tab */}
-        <Tab.Screen 
-        name="Home" 
-        component={HomeScreen}  
-        options={({ route }) => ({
-          tabBarLabel: route.params?.email ? `Hello, ${route.params.email}` : "Hello Guest!",
-        })}
-        />
-        <Tab.Screen name="Register" component={Register}/>
-        <Tab.Screen name="Settings" component={Settings} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <NativeBaseProvider>
+   <TabNavigationScreen/>
+   </NativeBaseProvider>
   );
 }
 
 export default App;
+
