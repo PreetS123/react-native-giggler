@@ -1,4 +1,6 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+const screenWidth= Dimensions.get('window').width;
 
 const homeStyles= StyleSheet.create({
   container:{
@@ -10,22 +12,25 @@ const homeStyles= StyleSheet.create({
     flex:1,
     alignItems:'center',
   },
+  commonFlex:{
+    flex:1
+  },
   textCenter:{
     textAlign:'center'
   },
   profileImage:{
-    width:150,
-    height:150,
-    borderRadius:75,
+    width:screenWidth*0.5,
+    height:screenWidth*0.5,
+    borderRadius:screenWidth*0.25,
     marginBottom:16,
   },
   name:{
-    fontSize:24,
+    fontSize:screenWidth > 375 ? 24 :20,
     fontWeight:'bold',
     marginBottom:8,
   },
   title:{
-    fontSize:18,
+    fontSize: screenWidth > 375 ? 18 : 16,
     marginBottom:16,
   },
   summary:{
@@ -33,7 +38,7 @@ const homeStyles= StyleSheet.create({
     marginBottom:16,
   },
   sectionHeader:{
-    fontSize:18,
+    fontSize: screenWidth > 375 ? 18 :16,
     fontWeight:'bold',
     marginTop:16,
     marginBottom:8,
@@ -51,7 +56,7 @@ const homeStyles= StyleSheet.create({
     borderRadius:8,
   },
   experienceTitle:{
-    fontSize:16,
+    fontSize: screenWidth >375 ? 16 : 14,
     fontWeight:'bold',
     marginBottom:4,
   },
@@ -62,7 +67,7 @@ const homeStyles= StyleSheet.create({
     marginBottom:16,
   },
   educationDegree:{
-    fontSize:16,
+    fontSize: screenWidth > 375 ? 16 : 12,
     fontWeight:'bold',
     marginBottom:4,
   }
