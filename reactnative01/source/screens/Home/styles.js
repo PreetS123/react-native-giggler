@@ -49,6 +49,22 @@ const homeStyles= StyleSheet.create({
     padding:8,
     margin:4,
     borderRadius:8,
+  },
+  experienceTitle:{
+    fontSize:16,
+    fontWeight:'bold',
+    marginBottom:4,
+  },
+  experienceItem:{
+    marginBottom:16,
+  },
+  educationItem:{
+    marginBottom:16,
+  },
+  educationDegree:{
+    fontSize:16,
+    fontWeight:'bold',
+    marginBottom:4,
   }
 })
 

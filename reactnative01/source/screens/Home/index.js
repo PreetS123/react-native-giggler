@@ -57,10 +57,10 @@ export default function HomeScreen({route}) {
       <Text style={[homeStyles.sectionHeader,homeStyles.textCenter]}>Experience</Text>
       {
         resumeData.experience.map((el,i)=>(
-          <View key={i}>
-          <Text>{el.title}</Text>
-          <Text>{el.company}</Text>
-          <Text>{el.year}</Text>
+          <View key={i} style={homeStyles.experienceItem}>
+          <Text style={homeStyles.experienceTitle}>{el.title}</Text>
+          <Text style={homeStyles.textCenter}>{el.company}</Text>
+          <Text style={homeStyles.textCenter}>({el.year})</Text>
           </View>
         ))
       }
@@ -69,10 +69,10 @@ export default function HomeScreen({route}) {
       <View>
       <Text style={[homeStyles.sectionHeader,homeStyles.textCenter]}>Education</Text>
       {resumeData.education.map((el,i)=>(
-        <View key={i}>
-        <Text>{el.degree}</Text>
-        <Text>{el.school}</Text>
-        <Text>{el.year}</Text>
+        <View key={i} style={homeStyles.educationItem}>
+        <Text style={homeStyles.educationDegree}>{el.degree}</Text>
+        <Text style={homeStyles.textCenter}>{el.school}</Text>
+        <Text style={homeStyles.textCenter}>{el.year}</Text>
         </View>
       ))}
       </View>
