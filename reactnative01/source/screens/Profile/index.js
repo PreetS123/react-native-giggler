@@ -1,7 +1,8 @@
 import { View, Text, Dimensions, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Box, Button, HStack, Image, ScrollView } from 'native-base'
+import { Accordion, Box, Button, HStack, Image, ScrollView, VStack } from 'native-base'
 import { useNavigation } from '@react-navigation/native'
+import AccordianTypeCom from '../../components/AccordianTypeCom';
 
 export default function ProfileScreen() {
   const navigation= useNavigation();
@@ -19,7 +20,7 @@ export default function ProfileScreen() {
     source={{
       uri:"https://cdn0.desidime.com/attachments/photos/886564/medium/Screenshot20230531-082422Myntra.jpg?1685501674"
     }}/>
-    <HStack m={2} p={2} space={3} bg={'gray.300'} justifyContent={'space-around'} >
+    <HStack mt={2} mb={2} p={2} space={3} bg={'gray.300'} justifyContent={'space-around'} >
     <Button 
     bg={'white'}
     size="md" 
@@ -70,6 +71,32 @@ export default function ProfileScreen() {
           </TouchableOpacity>
           </Box>
       </View>
+      <VStack>
+            <TouchableOpacity onPress={()=>navigation.navigate("Myntra Kotak Credit Card")}>
+            <AccordianTypeCom  iconName="folder-open" heading="Myntra Kotak Credit Card" subHeading="Apply now to get 12.5% instant discount" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("Payment & Currencies")}>
+            <AccordianTypeCom  iconName="credit-card-alt" heading="Payments & Currencies" subHeading="View balance and saved payment methods" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("Earn & Redeem")}>
+            <AccordianTypeCom  iconName="wallet" heading="Earn & Redeem"  subHeading="Scan coupons, view prizes and earn rewards"/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("Manage Account")}>
+            <AccordianTypeCom  iconName="pen-to-square" heading="Manage Account" subHeading="Your account details & saved addresses" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("Challenges")}>
+            <AccordianTypeCom  iconName="bullseye" heading="Challenges" subHeading="Earn prizes by completing fun tasks" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("Wishlist")}>
+            <AccordianTypeCom  iconName="heart" heading="Wishlist" subHeading="Your most loved styles" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("Myntra Suggest")}>
+            <AccordianTypeCom  iconName="star" heading="Myntra Suggest" subHeading="100% personalized feed just for you" />
+            </TouchableOpacity>
+            <TouchableOpacity>
+            <AccordianTypeCom  iconName="gear" heading="Settings" subHeading="Manage Notification"/>
+            </TouchableOpacity>
+      </VStack>
     </ScrollView>
   )
 }
@@ -101,6 +128,6 @@ const styles= StyleSheet.create({
     textAlign:'center',
     height:30,
     width:150,
-    margin:2
+    margin:4
   }
 })
